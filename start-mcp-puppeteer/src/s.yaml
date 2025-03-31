@@ -33,6 +33,8 @@ resources:
           - dist/index.js
         port: 8080
       code: ./code
+      concurrencyConfig:
+        reservedConcurrency: 1
       triggers:
         - triggerName: httpTrigger
           triggerType: http

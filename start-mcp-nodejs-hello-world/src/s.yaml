@@ -1,33 +1,36 @@
 edition: 3.0.0
-name: mcp-server-app
-access: "{{ access }}"
-
+name: start-mcp-server-nodejs
+access: '{{access}}'
 vars:
-  region: "{{ region }}"
-
+  region: '{{region}}'
+  functionName: '{{functionName}}'
 resources:
-  start-mcp-server:
+  mcp_server:
     component: fc3
+    actions:
+      pre-deploy:
+        - run: export PATH=/usr/local/versions/node/v20.8.1/bin:$PATH || true || ver && npm install && node check_node_version.mjs && npm run build
+          path: ./code
     props:
       region: ${vars.region}
-      functionName: "{{ functionName }}"
-      description: mcp server deployed by devs
+      description: Serverless Devs Node MCP Server
       runtime: custom.debian10
-      timeout: 600
+      timeout: 300
       cpu: 0.5
       memorySize: 512
       diskSize: 512
-      instanceConcurrency: 200
       logConfig: auto
       environmentVariables:
-        PATH: 
-          /var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PATH: >-
+          /var/fc/lang/nodejs20/bin:/opt/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       customRuntimeConfig:
         command:
           - node
-          - dist/sse.js
-        port: 3001
+          - ./dist/index.js
+        port: 3000
+      functionName: ${vars.functionName}
       code: ./code
+      instanceConcurrency: 200
       concurrencyConfig:
         reservedConcurrency: 1
       triggers:
