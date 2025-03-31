@@ -1,0 +1,57 @@
+edition: 3.0.0
+name: mcp-server-app
+access: "{{ access }}"
+
+vars:
+  region: "{{ region }}"
+
+resources:
+  start-mcp-server:
+    component: fc3
+    props:
+      region: ${vars.region}
+      functionName: "{{ functionName }}"
+      description: mcp server deployed by devs
+      runtime: custom.debian10
+      timeout: 600
+      cpu: 0.5
+      memorySize: 512
+      diskSize: 512
+      instanceConcurrency: 200
+      logConfig: auto
+      environmentVariables:
+        PATH: 
+          /opt/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PYTHONPATH: /opt/python
+        AMAP_MAPS_API_KEY: '{{ AMAP_MAPS_API_KEY }}'
+      layers:
+        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/1
+      customRuntimeConfig:
+        command:
+          - mcp-proxy
+          - --sse-port
+          - '8080'
+          - --sse-host
+          - 0.0.0.0
+          - --allow-origin
+          - '*'
+          - --pass-environment
+          - --
+          - node
+          - build/index.js
+        port: 8080
+      code: ./code
+      concurrencyConfig:
+        reservedConcurrency: 1
+      triggers:
+        - triggerName: httpTrigger
+          triggerType: http
+          triggerConfig:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - HEAD
+              - OPTIONS
