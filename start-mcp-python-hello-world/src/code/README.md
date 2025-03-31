@@ -34,5 +34,4 @@ start-mcp-server/
 ├── src/
 │ ├── code/
 │ │ ├── main.py # 主应用入口
-│ │ └── pyproject.toml # 依赖配置
 └── s.yaml # Serverless 部署配置
