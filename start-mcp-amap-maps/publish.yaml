@@ -1,7 +1,7 @@
 Edition: 3.0.0
 Type: Project
 Name: start-mcp-amap-maps
-Version: 0.0.3
+Version: 0.0.4
 Provider:
   - 阿里云 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
 Description: MCP Server for the AMap Map API
@@ -47,5 +47,4 @@ Parameters:
       type: string
       default: ''
       sensitive: 'true'
-      pattern: ^[a-zA-Z0-9_][a-zA-Z0-9_\-.]*$
       description: 获取高德地图 AMap Maps API key，请参考 https://lbs.amap.com/api/webservice/create-project-and-key.
