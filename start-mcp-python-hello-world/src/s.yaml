@@ -3,7 +3,6 @@ name: start-mcp-server-python
 access: '{{access}}'
 vars:
   region: '{{region}}'
-  functionName: '{{functionName}}'
   path: /var/fc/lang/python3.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin:/opt/bin:/code:/code/bin
 resources:
   mcp_server:
@@ -17,7 +16,7 @@ resources:
       memorySize: 512
       diskSize: 512
       layers:
-        - acs:fc:cn-hangzhou:1154600634854327:layers/test-mcp-python/versions/1
+        - acs:fc:${vars.region}:official:layers/Python3x-MCP/versions/3
       logConfig: auto
       environmentVariables:
         PATH: ${vars.path}
@@ -34,7 +33,7 @@ resources:
           - '0.0.0.0'
           - --port
           - '9000'
-      functionName: ${vars.functionName}
+      functionName: '{{functionName}}'
       code: ./code
       instanceConcurrency: 200
       concurrencyConfig:
