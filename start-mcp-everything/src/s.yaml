@@ -14,19 +14,28 @@ resources:
       description: mcp server deployed by devs
       runtime: custom.debian10
       timeout: 600
-      cpu: 0.5
-      memorySize: 512
+      cpu: 1
+      memorySize: 2048
       diskSize: 512
       instanceConcurrency: 200
       logConfig: auto
       environmentVariables:
-        PATH: 
-          /var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PATH: /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PYTHONPATH: /opt/python:/code/python:/code
+      layers:
+        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/6
       customRuntimeConfig:
         command:
-          - node
-          - dist/sse.js
-        port: 3001
+          - 'supergateway'
+          - '--stdio'
+          - 'node dist/index.js'
+          - '--port'
+          - '8080'
+          - '--ssePath'
+          - '/sse'
+          - '--messagePath'
+          - '/message'
+        port: 8080
       code: ./code
       concurrencyConfig:
         reservedConcurrency: 1
