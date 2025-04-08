@@ -23,7 +23,7 @@ resources:
         PYTHONPATH: /opt/python:/code/python:/code
         TZ: Asia/Shanghai
       customRuntimeConfig:
-        port: 9000
+        port: 8080
         command:
           - python3
           - -m
@@ -32,7 +32,7 @@ resources:
           - --host
           - '0.0.0.0'
           - --port
-          - '9000'
+          - '8080'
       functionName: '{{functionName}}'
       code: ./code
       instanceConcurrency: 200

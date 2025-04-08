@@ -26,7 +26,7 @@ resources:
         command:
           - node
           - ./dist/index.js
-        port: 3000
+        port: 8080
       functionName: '{{functionName}}'
       code: ./code
       instanceConcurrency: 200

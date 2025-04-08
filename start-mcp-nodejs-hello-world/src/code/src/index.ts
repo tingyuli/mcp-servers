@@ -68,6 +68,6 @@ app.post("/messages", async (req, res) => {
   return;
 });
 
-app.listen(3000, () => {
-  console.log('MCP Server running on port 3000');
+app.listen(8080, () => {
+  console.log('MCP Server running on port 8080');
 });
