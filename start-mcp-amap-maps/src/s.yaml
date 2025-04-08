@@ -21,24 +21,22 @@ resources:
       logConfig: auto
       environmentVariables:
         PATH: 
-          /opt/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-        PYTHONPATH: /opt/python
+          /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PYTHONPATH: /opt/python:/code/python:/code
         AMAP_MAPS_API_KEY: '{{ AMAP_MAPS_API_KEY }}'
       layers:
-        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/1
+        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/6
       customRuntimeConfig:
         command:
-          - mcp-proxy
-          - --sse-port
+          - 'supergateway'
+          - '--stdio'
+          - 'node index.js'
+          - '--port'
           - '8080'
-          - --sse-host
-          - 0.0.0.0
-          - --allow-origin
-          - '*'
-          - --pass-environment
-          - --
-          - node
-          - build/index.js
+          - '--ssePath'
+          - '/sse'
+          - '--messagePath'
+          - '/message'
         port: 8080
       code: ./code
       concurrencyConfig:

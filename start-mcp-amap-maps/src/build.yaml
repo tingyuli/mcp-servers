@@ -8,5 +8,3 @@ start-mcp-server:
     steps:
       - run: npm install
         path: ./code
-      - run: npm run build
-        path: ./code

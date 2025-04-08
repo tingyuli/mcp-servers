@@ -1,7 +1,7 @@
 Edition: 3.0.0
 Type: Project
 Name: start-mcp-amap-maps
-Version: 0.0.4
+Version: 0.0.5
 Provider:
   - 阿里云 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
 Description: MCP Server for the AMap Map API
@@ -9,7 +9,7 @@ HomePage: https://github.com/devsapp/mcp-servers/tree/main/start-mcp-amap-maps
 Tags: #标签详情
   - MCP
   - Serverless Devs
-  - Develop
+  - Develop-Fold
 Category: Others # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
 Service: # 使用的服务
   函数计算: # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
