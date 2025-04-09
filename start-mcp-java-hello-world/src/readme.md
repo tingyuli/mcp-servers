@@ -1,7 +1,7 @@
 
 > 注：当前项目为 Serverless Devs 应用，由于应用中会存在需要初始化才可运行的变量（例如应用部署地区、函数名等等），所以**不推荐**直接 Clone 本仓库到本地进行部署或直接复制 s.yaml 使用，**强烈推荐**通过 `s init ${模版名称}` 的方法或应用中心进行初始化，详情可参考[部署 & 体验](#部署--体验) 。
 
-# start-mcp-java-hello-world-stdio 帮助文档
+# start-mcp-java-hello-world 帮助文档
 
 <description>
 
@@ -40,7 +40,7 @@
 
 <appcenter>
    
-- :fire: 通过 [云原生应用开发平台 CAP](https://cap.console.aliyun.com/template-detail?template=start-mcp-java-hello-world-stdio) ，[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://cap.console.aliyun.com/template-detail?template=start-mcp-java-hello-world-stdio) 该应用。
+- :fire: 通过 [云原生应用开发平台 CAP](https://cap.console.aliyun.com/template-detail?template=start-mcp-java-hello-world) ，[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://cap.console.aliyun.com/template-detail?template=start-mcp-java-hello-world) 该应用。
    
 </appcenter>
 <deploy>
@@ -52,10 +52,9 @@
 
 <appdetail id="flushContent">
 
-这是一个部署到 FC 的 MCP STDIO Server 的 hello world 样例。您可以通过这个模版初始化一个简单的、开箱即用的、可进行二次开发的 MCP SSE Server。 
+这是一个部署到 FC 的 MCP Server 的 Java hello world 样例。您可以通过这个模版初始化一个简单的、开箱即用的、可进行二次开发的 MCP Server。 
  
 此样例包含一个名为 `helloWorld` 的 Tool，您可基于此样例 Tool 进行二次开发。
-
 
 </appdetail>
 
@@ -69,7 +68,7 @@
 
 <usedetail id="flushContent">
 
-部署完成拿到 URL 后，准备好支持 SSE 的 MCP Client，通过 SSETransport 进行连接。
+部署完成拿到 URL 后，准备好支持 SSE 或 STDIO 的 MCP Client，通过 Transport 进行连接。
 
 </usedetail>
 
