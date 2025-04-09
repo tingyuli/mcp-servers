@@ -12,7 +12,7 @@ public class McpServerApplication {
 	public static void main(String[] args) {
 		// Start the Spring Boot application
 		// and the MCP server
-		System.out.println("Starting MCP server...");
+		System.out.println("MCP server started...");
 		SpringApplication.run(McpServerApplication.class, args);
 	}
 
