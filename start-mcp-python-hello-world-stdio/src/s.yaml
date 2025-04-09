@@ -17,16 +17,25 @@ resources:
       diskSize: 512
       layers:
         - acs:fc:${vars.region}:official:layers/Python3x-MCP/versions/3
+        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/6
       logConfig: auto
       environmentVariables:
-        PATH: ${vars.path}
+        PATH: 
+          /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
         PYTHONPATH: /opt/python:/code/python:/code
         TZ: Asia/Shanghai
       customRuntimeConfig:
         port: 8080
         command:
-          - python3
-          - main.py
+          - 'supergateway'
+          - '--stdio'
+          - 'python3 main.py'
+          - '--port'
+          - '8080'
+          - '--ssePath'
+          - '/sse'
+          - '--messagePath'
+          - '/message'
       functionName: '{{functionName}}'
       code: ./code
       instanceConcurrency: 200

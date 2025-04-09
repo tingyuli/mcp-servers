@@ -20,12 +20,22 @@ resources:
       diskSize: 512
       logConfig: auto
       environmentVariables:
-        PATH: >-
-          /var/fc/lang/nodejs20/bin:/opt/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PATH: 
+          /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PYTHONPATH: /opt/python:/code/python:/code
+      layers:
+        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/6
       customRuntimeConfig:
         command:
-          - node
-          - ./dist/index.js
+          - 'supergateway'
+          - '--stdio'
+          - 'node ./dist/index.js'
+          - '--port'
+          - '8080'
+          - '--ssePath'
+          - '/sse'
+          - '--messagePath'
+          - '/message'
         port: 8080
       functionName: '{{functionName}}'
       code: ./code
