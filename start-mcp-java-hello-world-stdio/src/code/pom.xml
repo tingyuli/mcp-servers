@@ -12,10 +12,10 @@
 
     <groupId>com.example</groupId>
 
-    <artifactId>mcp-weather-stdio-server</artifactId>
+    <artifactId>mcp-stdio-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Spring AI MCP Weather STDIO server</name>
+    <name>Spring AI MCP STDIO server</name>
     <description>Sample Spring Boot application demonstrating MCP stdio server usage</description>
 
 
