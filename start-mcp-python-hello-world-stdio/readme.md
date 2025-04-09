@@ -73,8 +73,7 @@
 
 ### 部署
 
-点击“一键部署”按钮即可。如果需要 SSE 服务，需要使用 mcp-proxy 等代理工具。
-
+点击“一键部署”按钮即可。默认使用了 `supergateway` 进行 SSE 代理，可使用支持 SSE 的 Client 进行连接。
 
 </usedetail>
 
@@ -96,7 +95,7 @@ pip install -r requirements.txt
 ### 本地运行
 
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 9000
+python3 main.py
 ```
 
 </development>

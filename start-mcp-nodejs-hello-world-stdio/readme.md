@@ -97,6 +97,9 @@ server.tool(
 ## 二次开发指南
 
 <development id="flushContent">
+
+您可基于此样例 Tool 进行二次开发。
+
 </development>
 
 
