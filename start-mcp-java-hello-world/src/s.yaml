@@ -12,7 +12,7 @@ resources:
           path: ./code
     props:
       region: ${vars.region}
-      description: Serverless Devs Node MCP Server
+      description: Serverless Devs Java MCP Server
       runtime: custom.debian10
       timeout: 300
       cpu: 0.5
