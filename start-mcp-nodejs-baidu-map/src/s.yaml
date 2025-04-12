@@ -13,7 +13,7 @@ resources:
       functionName: "{{ functionName }}"
       description: mcp server deployed by devs
       runtime: custom.debian10
-      timeout: 600
+      timeout: 300
       cpu: 0.5
       memorySize: 512
       diskSize: 512

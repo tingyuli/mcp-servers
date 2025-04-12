@@ -1,5 +1,5 @@
 edition: 3.0.0
-name: mcp-server-app
+name: hello-world-app
 access: "{{ access }}"
 
 vars: #
@@ -16,22 +16,23 @@ resources:
       code: ./code
       handler: index.handler
       timeout: 300
-      instanceConcurrency: 200
-      cpu: 1
-      memorySize: 2048
+      instanceConcurrency: 100
+      cpu: 0.5
+      memorySize: 512
       diskSize: 512
       logConfig: auto
       environmentVariables:
         PATH: 
           /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
         PYTHONPATH: /opt/python:/code/python:/code
+        FINANCIAL_DATASETS_API_KEY: "{{ FINANCIAL_DATASETS_API_KEY }}"
       layers:
         - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/6
       customRuntimeConfig:
         command:
           - 'supergateway'
           - '--stdio'
-          - 'mcp-server-fetch'
+          - 'python3 server.py'
           - '--port'
           - '8080'
           - '--ssePath'
