@@ -175,15 +175,6 @@ This MCP server provides the following tools:
 
 </usedetail>
 
-## 二次开发指南
-
-<development id="flushContent">
-
-原始代码地址: [https://github.com/financial-datasets/mcp-server/tree/main](https://github.com/financial-datasets/mcp-server/tree/main)
-
-您可以从原始代码仓库更新最新的代码
-
-</development>
 
 
 
