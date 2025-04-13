@@ -40,6 +40,7 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - quickchart: [start-mcp-quickchart](./start-mcp-quickchart/src)
 - firecrawl: [start-mcp-firecrawl](./start-mcp-firecrawl/src)
 - agentql: [start-mcp-agentql](./start-mcp-agentql/src)
+- Perplexity Ask: [start-mcp-perplexity-ask](./start-mcp-perplexity-ask/src)
 
 其中有 hello-world 示例:
 
