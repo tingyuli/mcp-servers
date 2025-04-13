@@ -1,0 +1,55 @@
+edition: 3.0.0
+name: mcp-server-app
+access: "{{ access }}"
+
+vars:
+  region: "{{ region }}"
+
+resources:
+  start-mcp-server:
+    component: fc3
+    props:
+      region: ${vars.region}
+      functionName: "{{ functionName }}"
+      description: mcp server deployed by devs
+      runtime: custom.debian10
+      timeout: 300
+      cpu: 1
+      memorySize: 2048
+      diskSize: 512
+      instanceConcurrency: 200
+      logConfig: auto
+      environmentVariables:
+        PATH: 
+          /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        PYTHONPATH: /opt/python:/code/python:/code
+        NOTION_API_TOKEN: '{{ NOTION_API_TOKEN }}'
+      layers:
+        - acs:fc:${vars.region}:1767215449378635:layers/mcp-proxy-layer/versions/6
+      customRuntimeConfig:
+        command:
+          - 'supergateway'
+          - '--stdio'
+          - '/code/node_modules/.bin/mcp-notion-server'
+          - '--port'
+          - '8080'
+          - '--ssePath'
+          - '/sse'
+          - '--messagePath'
+          - '/message'
+        port: 8080
+      code: ./code
+      concurrencyConfig:
+        reservedConcurrency: 1
+      triggers:
+        - triggerName: httpTrigger
+          triggerType: http
+          triggerConfig:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - HEAD
+              - OPTIONS
