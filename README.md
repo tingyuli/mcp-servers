@@ -38,6 +38,7 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - 百度地图(Nodejs版): [start-mcp-nodejs-baidu-map](./start-mcp-nodejs-baidu-map/src/)
 - Financial Datasets: [start-mcp-financial-datasets](./start-mcp-financial-datasets/src/)
 - quickchart: [start-mcp-quickchart](./start-mcp-quickchart/src/)
+- firecrawl: [start-mcp-firecrawl](./start-mcp-firecrawl/src)
 
 其中有 hello-world 示例:
 
