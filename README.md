@@ -34,6 +34,7 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - 百度地图(Nodejs版): [start-mcp-nodejs-baidu-map](./start-mcp-nodejs-baidu-map/src/)
 - Time: [start-mcp-time](./start-mcp-time/src/)
 - brave-search: [start-mcp-brave-search](./start-mcp-brave-search/src/)
+- ever-art: [start-mcp-ever-art](./start-mcp-ever-art/src)
 
 其中有 hello-world 示例:
 
