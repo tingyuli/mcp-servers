@@ -35,6 +35,7 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - Time: [start-mcp-time](./start-mcp-time/src/)
 - brave-search: [start-mcp-brave-search](./start-mcp-brave-search/src/)
 - ever-art: [start-mcp-ever-art](./start-mcp-ever-art/src)
+- sequentialthinking: [start-mcp-sequentialthinking](./start-mcp-sequentialthinking/src)
 
 其中有 hello-world 示例:
 
