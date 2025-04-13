@@ -1,7 +1,7 @@
 Edition: 3.0.0
 Type: Project
 Name: start-mcp-perplexity-ask
-Version: dev
+Version: 0.0.1
 Provider:
   - 阿里云 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
 Description: Perplexity Ask MCP Server
@@ -9,7 +9,7 @@ HomePage: https://github.com/ppl-ai/modelcontextprotocol
 Tags: #标签详情
   - MCP
   - Serverless Devs
-Category: Others # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
+Category: AI工具 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
 Service: # 使用的服务
   函数计算: # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
     Authorities: #权限描述
