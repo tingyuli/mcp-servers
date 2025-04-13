@@ -42,6 +42,7 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - agentql: [start-mcp-agentql](./start-mcp-agentql/src)
 - Perplexity Ask: [start-mcp-perplexity-ask](./start-mcp-perplexity-ask/src)
 - Json: [start-mcp-json](./start-mcp-json/src)
+- Figma-Context-MCP: [start-mcp-figma](./start-mcp-figma/src)
 
 其中有 hello-world 示例:
 
