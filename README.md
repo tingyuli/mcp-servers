@@ -24,18 +24,20 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 
 ## mcp-proxy + stdio 模版
 
-- 高德地图: [start-mcp-amap-maps](./start-mcp-amap-maps/src/)
-- Chatppt: [start-mcp-chatppt](./start-mcp-chatppt/src/)
-- Fetch Webpage: [start-mcp-fetch](./start-mcp-fetch/src/)
-- Financial Datasets: [start-mcp-financial-datasets](./start-mcp-financial-datasets/src/)
 - GitHub: [start-mcp-github](./start-mcp-github/src)
 - GitLab: [start-mcp-gitlab](./start-mcp-gitlab/src)
-- OpenWeather: [start-mcp-openweather](./start-mcp-openweather/src/)
-- 百度地图(Nodejs版): [start-mcp-nodejs-baidu-map](./start-mcp-nodejs-baidu-map/src/)
+- Fetch: [start-mcp-fetch](./start-mcp-fetch/src/)
 - Time: [start-mcp-time](./start-mcp-time/src/)
 - brave-search: [start-mcp-brave-search](./start-mcp-brave-search/src/)
 - ever-art: [start-mcp-ever-art](./start-mcp-ever-art/src)
 - sequentialthinking: [start-mcp-sequentialthinking](./start-mcp-sequentialthinking/src)
+- everything: [start-mcp-everything](./start-mcp-everything/src)
+- 高德地图: [start-mcp-amap-maps](./start-mcp-amap-maps/src/)
+- Chatppt: [start-mcp-chatppt](./start-mcp-chatppt/src/)
+- OpenWeather: [start-mcp-openweather](./start-mcp-openweather/src/)
+- 百度地图(Nodejs版): [start-mcp-nodejs-baidu-map](./start-mcp-nodejs-baidu-map/src/)
+- Financial Datasets: [start-mcp-financial-datasets](./start-mcp-financial-datasets/src/)
+- quickchart: [start-mcp-quickchart](./start-mcp-quickchart/src/)
 
 其中有 hello-world 示例:
 
