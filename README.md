@@ -28,11 +28,12 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - Chatppt: [start-mcp-chatppt](./start-mcp-chatppt/src/)
 - Fetch Webpage: [start-mcp-fetch](./start-mcp-fetch/src/)
 - Financial Datasets: [start-mcp-financial-datasets](./start-mcp-financial-datasets/src/)
-- Github: [start-mcp-github](./start-mcp-github/src)
-- Gitlab: [start-mcp-gitlab](./start-mcp-gitlab/src)
+- GitHub: [start-mcp-github](./start-mcp-github/src)
+- GitLab: [start-mcp-gitlab](./start-mcp-gitlab/src)
 - OpenWeather: [start-mcp-openweather](./start-mcp-openweather/src/)
 - 百度地图(Nodejs版): [start-mcp-nodejs-baidu-map](./start-mcp-nodejs-baidu-map/src/)
 - Time: [start-mcp-time](./start-mcp-time/src/)
+- brave-search: [start-mcp-brave-search](./start-mcp-brave-search/src/)
 
 其中有 hello-world 示例:
 

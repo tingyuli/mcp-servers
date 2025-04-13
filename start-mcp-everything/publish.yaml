@@ -15,7 +15,7 @@ Service: # 使用的服务
   函数计算: # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
     Authorities: #权限描述
       - AliyunFCFullAccess # 所需要的权限，例如AliyunFCFullAccess
-# Organization: 阿里云函数计算（FC） # 所属组织
+Organization: 阿里云函数计算（FC） # 所属组织
 Effective: Public # 是否公开，取值：Public，Private，Organization
 Parameters:
   type: object
