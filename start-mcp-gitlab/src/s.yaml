@@ -21,7 +21,7 @@ resources:
       logConfig: auto
       environmentVariables:
         PATH: /opt/nodejs/node_modules/.bin:/opt/python/bin:/code/python/bin:/var/fc/lang/python3.10/bin:/var/fc/lang/nodejs20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-        PYTHONPATH: /opt/python:/code/python:/code
+        PYTHONPATH: /code:/code/python:/opt/python
         GITLAB_PERSONAL_ACCESS_TOKEN: '{{ GITLAB_PERSONAL_ACCESS_TOKEN }}'
         GITLAB_API_URL: '{{ GITLAB_API_URL }}'
       layers:

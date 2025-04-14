@@ -20,7 +20,7 @@ resources:
       logConfig: auto
       environmentVariables:
         PATH: ${vars.path}
-        PYTHONPATH: /opt/python:/code/python:/code
+        PYTHONPATH: /code:/code/python:/opt/python
         TZ: Asia/Shanghai
       customRuntimeConfig:
         port: 8080
