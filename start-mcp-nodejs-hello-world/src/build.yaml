@@ -1,4 +1,4 @@
-mcp_server:
+start-mcp-nodejs-hello-world:
   default:
     languages:
       - nodejs20

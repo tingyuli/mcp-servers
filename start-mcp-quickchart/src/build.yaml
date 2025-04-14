@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-quickchart:
   default:
     languages:
       - nodejs20

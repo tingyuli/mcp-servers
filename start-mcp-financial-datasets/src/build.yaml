@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-financial-datasets:
   default:
     languages:
       - python3.10

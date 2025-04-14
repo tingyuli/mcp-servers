@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-everything:
   default:
     languages:
       - nodejs20

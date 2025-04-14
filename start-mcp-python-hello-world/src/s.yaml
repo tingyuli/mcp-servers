@@ -5,7 +5,7 @@ vars:
   region: '{{region}}'
   path: /var/fc/lang/python3.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin:/opt/bin:/code:/code/bin
 resources:
-  mcp_server:
+  start-mcp-python-hello-world:
     component: fc3
     props:
       region: ${vars.region}

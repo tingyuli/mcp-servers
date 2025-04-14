@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-brave-search:
   default:
     languages:
       - nodejs20

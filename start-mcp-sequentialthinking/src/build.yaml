@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-sequentialthinking:
   default:
     languages:
       - nodejs20

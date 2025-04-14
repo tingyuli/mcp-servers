@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-fetch:
   default:
     languages:
       - python3.10

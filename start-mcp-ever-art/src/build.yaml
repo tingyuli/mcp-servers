@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-ever-art:
   default:
     languages:
       - nodejs20

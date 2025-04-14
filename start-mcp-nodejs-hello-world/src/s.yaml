@@ -4,7 +4,7 @@ access: '{{access}}'
 vars:
   region: '{{region}}'
 resources:
-  mcp_server:
+  start-mcp-nodejs-hello-world:
     component: fc3
     actions:
       pre-deploy:

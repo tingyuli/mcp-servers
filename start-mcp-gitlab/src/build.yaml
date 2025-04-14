@@ -1,4 +1,4 @@
-start-mcp-server:
+start-mcp-gitlab:
   default:
     languages:
       - nodejs20

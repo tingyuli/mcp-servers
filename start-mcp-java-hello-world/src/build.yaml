@@ -1,4 +1,4 @@
-mcp_server:
+start-mcp-java-hello-world:
   default:
     languages:
       - java21

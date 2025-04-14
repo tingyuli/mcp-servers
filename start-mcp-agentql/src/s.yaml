@@ -6,7 +6,7 @@ vars:
   region: "{{ region }}"
 
 resources:
-  start-mcp-server:
+  start-mcp-agentql:
     component: fc3
     props:
       region: ${vars.region}
