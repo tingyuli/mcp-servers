@@ -1,4 +1,4 @@
-# MCP Servers on Serverless
+# MCP Servers on Function Compute
 
 MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 
