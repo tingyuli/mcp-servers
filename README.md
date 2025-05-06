@@ -1,3 +1,7 @@
+# 注意
+
+建议您直接参考 [https://github.com/devsapp/fcai-mcp-servers](https://github.com/devsapp/fcai-mcp-servers), 对于 MCP 服务的生命周期有更好的管理。 
+
 # MCP Servers on Function Compute
 
 MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
