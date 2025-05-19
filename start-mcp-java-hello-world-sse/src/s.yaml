@@ -8,7 +8,7 @@ resources:
     component: fc3
     actions:
       pre-deploy:
-        - run: chmod +x ./mvnw && ./mvnw clean install -DskipTests
+        - run: mvn clean install -DskipTests
           path: ./code
     props:
       region: ${vars.region}

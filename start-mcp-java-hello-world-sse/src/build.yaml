@@ -1,9 +1,12 @@
 start-mcp-java-hello-world:
   default:
     languages:
-      - java21
+      - java17
+    cache:
+      paths: 
+        - "~/.m2"
+    rootPath: ./code
     steps:
-      - run: chmod +x ./mvnw
+      - run: mvn clean install -DskipTests
         path: ./code
-      - run: ./mvnw clean install -DskipTests
-        path: ./code
+    
