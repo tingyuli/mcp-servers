@@ -61,3 +61,8 @@ MCP 协议中有 STDIO 与 SSE 两种传输机制，大致如下:
 - [start-mcp-nodejs-hello-world](./start-mcp-nodejs-hello-world/src/)
 - [start-mcp-python-hello-world](./start-mcp-python-hello-world/src/)
 - [start-mcp-java-hello-world](./start-mcp-java-hello-world/src)
+
+## StreamableHTTP 模版
+
+- [start-mcp-nodejs-streamable-http-stateless](https://github.com/devsapp/mcp-servers/tree/main/start-mcp-nodejs-streamable-http-stateless/src)
+- [start-mcp-nodejs-streamable-http-stateful](https://github.com/devsapp/mcp-servers/tree/main/start-mcp-nodejs-streamable-http-stateful/src)
