@@ -7,6 +7,12 @@ vars:
 resources:
   start-mcp-python-hello-world:
     component: fc3
+    actions: 
+      pre-deploy:
+        - run: python3 -c "import os; os.makedirs('python', exist_ok=True)"
+          path: ./code
+        - run: pip install -r requirements.txt -t ./python
+          path: ./code
     props:
       region: ${vars.region}
       description: Serverless Devs Python MCP Server
